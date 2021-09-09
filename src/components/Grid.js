@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import "../component_styles/Grid.css"
 
 function Grid(props) {
-  console.log(props.isMouseUp)
-  const [isMouseDown, setIsMouseDown] = useState(false)
   const arr = Array(99).fill(0)
   const sideLength = 10;
   const sideMeasure = '1fr '.repeat(sideLength);
@@ -14,8 +12,7 @@ function Grid(props) {
   function erase(square) {
     square.className = 'grid-square';
   }
-  function currentModeOnMouseDown(e) {
-    setIsMouseDown(true)
+  function currentMode(e) {
     if (mode === "color") {
       color(e.target)
     }
@@ -23,15 +20,12 @@ function Grid(props) {
       erase(e.target)
     }
   }
-  function currentModeOnMouseOver(e) {
-    if (!isMouseDown) return
-  }
   
   
   return (
     <div id="grid-container" style={{gridTemplateColumns: sideMeasure, gridTemplateRows: sideMeasure,}}>
       {arr.map(tmp => (
-      <div className="grid-square" onMouseDown={currentModeOnMouseDown} onMouseEnter={currentModeOnMouseOver}></div>
+      <div key={Math.random() * 1000} className="grid-square" onMouseEnter={currentMode}></div>
       ))}
       
     </div>

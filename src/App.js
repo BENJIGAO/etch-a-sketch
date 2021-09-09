@@ -2,22 +2,16 @@ import React, { useState } from 'react'
 import './App.css';
 
 import Grid from './components/Grid';
+import Sidebar from './components/Sidebar';
 function App() {
-  const [isMouseUp, setIsMouseUp] = useState(false)
-  function changeMouseStatus(e) {
-    switch (e.type) {
-      case "mouseup":
-        setIsMouseUp(true)
-        break;
-      case "mousedown":
-        setIsMouseUp(false);
-        break;
-    }
+  const [mode, setMode] = useState("black")
+  function changeMode(mode) {
+    setMode(mode)
   }
-  
   return (
-    <div className="App" onMouseUp={changeMouseStatus} onMouseDown={changeMouseStatus}>
-      <Grid isMouseUp={isMouseUp}/>
+    <div className="App">
+      <Sidebar changeMode={changeMode}/>
+      <Grid />
     </div>
   );
 }
