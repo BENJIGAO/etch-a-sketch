@@ -55,7 +55,7 @@ const Sidebar = (props) => {
         gridSquare.style.backgroundColor = '';
     })
   }
-  /* Third Major Function */
+
   function manageGridSizeDisplay() {
     const display = document.getElementById('grid-size-display');
     const slider = document.getElementById('grid-size-slider');
@@ -68,7 +68,6 @@ const Sidebar = (props) => {
     display.textContent = `${e.target.value}`;
   }
 
-  /* Fourth Major Function */
   function changeGridSize() {
     const slider = document.getElementById('grid-size-slider');
     slider.addEventListener('change', updateGrid);
@@ -79,9 +78,10 @@ const Sidebar = (props) => {
   }
 
   function changeMode(e) {
-    document.querySelector(".selected").classList.remove("selected")
+    const selectedBtn = document.querySelector(".selected")
+    if (selectedBtn) selectedBtn.classList.remove("selected")
     e.target.classList.add("selected");
-    setMode(e.target.id)
+    setMode(e.target.id);
   }
 
   return (
@@ -91,7 +91,7 @@ const Sidebar = (props) => {
       <p id="colors-header">Colors:</p>
       <div id="colors-container">
         <div className="colors-container-col">
-          <button onClick={changeMode} id="black" className="selected btn">Black</button>
+          <button onClick={changeMode} id="black" className="btn">Black</button>
           <button onClick={changeMode} id="blue" className="btn">Blue</button>
           <button onClick={changeMode} id="green" className="btn">Green</button>
           <button onClick={changeMode} id="magenta" className="btn">Magenta</button>

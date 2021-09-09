@@ -19,6 +19,7 @@
 .cyan {
   background-color: cyan;
 }
+
 .selected {
   border: 3.5px solid darkgray !important;
 }
@@ -34,6 +35,7 @@
   align-items: center;
   justify-content: space-evenly;
 }
+
 .btn {
   box-sizing: border-box;
   height: 30px;
@@ -63,6 +65,7 @@
 #eraser {
   font-size: 22px;
 }
+
 #colors-container {
   display: flex;
   justify-content: space-evenly;
