@@ -29,4 +29,29 @@
   background-color: pink;
   border: solid;
   transform: translateX(-50px) translateY(40px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#clear {
+  font-weight: bold;
+}
+#clear,
+#eraser {
+  font-size: 30px;
+  height: 60px;
+  width: 150px;
+}
+#colors-container {
+  display: flex;
+  justify-content: center;
+  height: 35%;
+  width: 160px;
+}
+
+.colors-container-col {
+  display: flex;
+  flex-direction: column;
 }

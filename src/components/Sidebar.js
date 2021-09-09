@@ -86,16 +86,23 @@ const Sidebar = (props) => {
 
   return (
     <div id="toolbar-container">
-      <button onClick={clearGrid}>Clear</button>
-      <button onClick={changeMode} id="eraser">Eraser</button>
-      <button onClick={changeMode} id="black" className="selected">Black</button>
-      <button onClick={changeMode} id="blue">Blue</button>
-      <button onClick={changeMode} id="green">Green</button>
-      <button onClick={changeMode} id="magenta">Magenta</button>
-      <button onClick={changeMode} id="rainbow">Rainbow</button>
-      <button onClick={changeMode}>Red</button>
-      <button onClick={changeMode} id="yellow">Yellow</button>
-      <button onClick={changeMode} id="cyan">Cyan</button>
+      <button onClick={clearGrid} id="clear" className="btn">Clear</button>
+      <button onClick={changeMode} id="eraser" className="btn">Eraser</button>
+      <p>Colors</p>
+      <div id="colors-container">
+        <div className="colors-container-col">
+          <button onClick={changeMode} id="black" className="selected btn">Black</button>
+          <button onClick={changeMode} id="blue" className="btn">Blue</button>
+          <button onClick={changeMode} id="green" className="btn">Green</button>
+          <button onClick={changeMode} id="magenta" className="btn">Magenta</button>
+        </div>
+        <div className="colors-container-col">
+          <button onClick={changeMode} id="rainbow" className="btn">Rainbow</button>
+          <button onClick={changeMode} id="red" className="btn">Red</button>
+          <button onClick={changeMode} id="yellow" className="btn">Yellow</button>
+          <button onClick={changeMode} id="cyan" className="btn">Cyan</button>
+        </div>
+      </div>
       <div id="grid-size-changer">
         <label id="grid-size-container" htmlFor="grid-size-slider">
             Grid Size:
