@@ -18,14 +18,15 @@ const Sidebar = (props) => {
   }
 
   function initiateMode(e) {
-    switch (mode.split(" ")[0]) {
-      case "color":
-        addColor(e, mode.split(" ")[1]);
+    const colors = ["black", "blue", "green", "magenta", "red", "yellow", "cyan"]
+    switch (true) {
+      case colors.includes(mode):
+        addColor(e, mode);
         break;
-      case "eraser":
+      case mode === "eraser":
         erase(e);
         break;
-      case "rainbow": 
+      case mode === "rainbow":
         addRainbow(e);
         break;
     }
@@ -75,6 +76,12 @@ const Sidebar = (props) => {
     props.changeGrid(e.target.value)
   }
 
+  function changeMode(e) {
+    document.querySelector(".selected").classList.remove("selected")
+    e.target.classList.add("selected");
+    setMode(e.target.id)
+  }
+
   return (
     <div>
       <div id="grid-size-changer">
@@ -84,7 +91,7 @@ const Sidebar = (props) => {
         </label>
         <input id="grid-size-slider" type="range" min="10" max="99" defaultValue="10" step="1"/>
       </div>
-      <button onClick={clearGrid}>Clear</button>
+      {/* <button onClick={clearGrid}>Clear</button>
       <button onClick={() => setMode("eraser")} id="eraser">Eraser</button>
       <button onClick={() => setMode("color black")} id="black">Black</button>
       <button onClick={() => setMode("color blue")} id="blue">Blue</button>
@@ -93,7 +100,17 @@ const Sidebar = (props) => {
       <button onClick={() => setMode("rainbow")} id="rainbow">Rainbow</button>
       <button onClick={() => setMode("color red")}>Red</button>
       <button onClick={() => setMode("color yellow")} id="yellow">Yellow</button>
-      <button onClick={() => setMode("color cyan")} id="cyan">Cyan</button>
+      <button onClick={() => setMode("color cyan")} id="cyan">Cyan</button> */}
+      <button onClick={clearGrid}>Clear</button>
+      <button onClick={changeMode} id="eraser">Eraser</button>
+      <button onClick={changeMode} id="black" className="selected">Black</button>
+      <button onClick={changeMode} id="blue">Blue</button>
+      <button onClick={changeMode} id="green">Green</button>
+      <button onClick={changeMode} id="magenta">Magenta</button>
+      <button onClick={changeMode} id="rainbow">Rainbow</button>
+      <button onClick={changeMode}>Red</button>
+      <button onClick={changeMode} id="yellow">Yellow</button>
+      <button onClick={changeMode} id="cyan">Cyan</button>
       
     </div>
   )
