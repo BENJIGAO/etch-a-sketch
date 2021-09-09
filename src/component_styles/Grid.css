@@ -10,3 +10,7 @@
 .grid-square {
   border: thin solid lightgray;
 }
+
+.black {
+  background-color: black;
+}
