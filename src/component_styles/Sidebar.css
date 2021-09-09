@@ -24,7 +24,7 @@
 }
 
 #toolbar-container {
-  height: 470px;
+  height: 500px;
   width: 200px;
   background-color: pink;
   border: solid;
@@ -33,6 +33,21 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+}
+.btn {
+  box-sizing: border-box;
+  height: 30px;
+  width: 75px;
+  border: none;
+}
+
+.btn:hover {
+  box-shadow: rgb(209 206 9) 0px 6px 20px 4px, rgb(209 206 9) 0px -6px 20px 4px;
+}
+
+#clear,
+#eraser {
+  background-color: whitesmoke;
 }
 
 #clear {
@@ -44,9 +59,13 @@
   height: 60px;
   width: 150px;
 }
+
+#eraser {
+  font-size: 22px;
+}
 #colors-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   height: 35%;
   width: 160px;
 }
@@ -54,4 +73,57 @@
 .colors-container-col {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#colors-header {
+  font-size: 18px;
+  font-weight: bold;
+  transform: translateY(15px);
+}
+
+#black {
+  background-color: black;
+}
+#blue {
+  background-color: blue;
+}
+#green {
+  background-color: green;
+}
+#magenta {
+  background-color: magenta;
+}
+#rainbow {
+  background: linear-gradient(
+    to top left,
+    red,
+    orange,
+    rgb(190, 190, 0),
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+#red {
+  background-color: red;
+}
+#yellow {
+  background-color: yellow;
+}
+#cyan {
+  background-color: cyan;
+}
+
+#black,
+#rainbow,
+#blue {
+  color: white;
+}
+
+#grid-size-container,
+#grid-size-display {
+  font-size: 22px;
+  font-weight: bold;
 }

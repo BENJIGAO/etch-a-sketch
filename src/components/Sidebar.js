@@ -88,7 +88,7 @@ const Sidebar = (props) => {
     <div id="toolbar-container">
       <button onClick={clearGrid} id="clear" className="btn">Clear</button>
       <button onClick={changeMode} id="eraser" className="btn">Eraser</button>
-      <p>Colors</p>
+      <p id="colors-header">Colors:</p>
       <div id="colors-container">
         <div className="colors-container-col">
           <button onClick={changeMode} id="black" className="selected btn">Black</button>
