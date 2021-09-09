@@ -8,9 +8,8 @@ const Sidebar = (props) => {
     manageGridSizeDisplay();
     changeGridSize();
   })
-  const [mode, setMode] = useState("");
+  const [mode, setMode] = useState("color black");
   
-
   function activateGrid() {
     const gridSquares = document.querySelectorAll(".grid-square");
     gridSquares.forEach(gridSquare => {
@@ -86,15 +85,15 @@ const Sidebar = (props) => {
         <input id="grid-size-slider" type="range" min="10" max="99" defaultValue="10" step="1"/>
       </div>
       <button onClick={clearGrid}>Clear</button>
-      <button onClick={() => setMode("eraser")}>Eraser</button>
-      <button onClick={() => setMode("color black")}>Black</button>
-      <button onClick={() => setMode("color blue")}>Blue</button>
-      <button onClick={() => setMode("color green")}>Green</button>
-      <button onClick={() => setMode("color magenta")}>Magenta</button>
-      <button onClick={() => setMode("rainbow")}>Rainbow</button>
+      <button onClick={() => setMode("eraser")} id="eraser">Eraser</button>
+      <button onClick={() => setMode("color black")} id="black">Black</button>
+      <button onClick={() => setMode("color blue")} id="blue">Blue</button>
+      <button onClick={() => setMode("color green")} id="green">Green</button>
+      <button onClick={() => setMode("color magenta")} id="magenta">Magenta</button>
+      <button onClick={() => setMode("rainbow")} id="rainbow">Rainbow</button>
       <button onClick={() => setMode("color red")}>Red</button>
-      <button onClick={() => setMode("color yellow")}>Yellow</button>
-      <button onClick={() => setMode("color cyan")}>Cyan</button>
+      <button onClick={() => setMode("color yellow")} id="yellow">Yellow</button>
+      <button onClick={() => setMode("color cyan")} id="cyan">Cyan</button>
       
     </div>
   )
