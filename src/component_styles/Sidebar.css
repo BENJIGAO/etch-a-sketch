@@ -22,3 +22,11 @@
 .selected {
   border: 3.5px solid darkgray !important;
 }
+
+#toolbar-container {
+  height: 470px;
+  width: 200px;
+  background-color: pink;
+  border: solid;
+  transform: translateX(-50px) translateY(40px);
+}

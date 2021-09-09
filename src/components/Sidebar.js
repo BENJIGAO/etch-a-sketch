@@ -85,14 +85,7 @@ const Sidebar = (props) => {
   }
 
   return (
-    <div>
-      <div id="grid-size-changer">
-        <label id="grid-size-container" htmlFor="grid-size-slider">
-            Grid Size:
-            <p id="grid-size-display"></p>
-        </label>
-        <input id="grid-size-slider" type="range" min="10" max="99" defaultValue="10" step="1"/>
-      </div>
+    <div id="toolbar-container">
       <button onClick={clearGrid}>Clear</button>
       <button onClick={changeMode} id="eraser">Eraser</button>
       <button onClick={changeMode} id="black" className="selected">Black</button>
@@ -103,6 +96,13 @@ const Sidebar = (props) => {
       <button onClick={changeMode}>Red</button>
       <button onClick={changeMode} id="yellow">Yellow</button>
       <button onClick={changeMode} id="cyan">Cyan</button>
+      <div id="grid-size-changer">
+        <label id="grid-size-container" htmlFor="grid-size-slider">
+            Grid Size:
+            <p id="grid-size-display"></p>
+        </label>
+        <input id="grid-size-slider" type="range" min="10" max="99" defaultValue="10" step="1"/>
+      </div>
     </div>
   )
 }

@@ -9,8 +9,9 @@
 #main-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: inherit;
-  margin-left: -10%;
+  margin-left: -20%;
   transform: scale(0.75);
 }
 
