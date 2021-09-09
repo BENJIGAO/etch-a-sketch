@@ -8,8 +8,8 @@ const Sidebar = () => {
   gridSquares.forEach(gridSquare => {
     gridSquare.addEventListener("mouseover", initiateMode)
   })
+
   function initiateMode(e) {
-    
     switch (mode.split(" ")[0]) {
       case "color":
         addColor(e, mode.split(" ")[1]);
@@ -17,14 +17,24 @@ const Sidebar = () => {
       case "eraser":
         erase(e);
         break;
+      case "rainbow": 
+        addRainbow(e);
+        break;
     }
   }
+
   function addColor(e, color) {
     e.target.className = `grid-square ${color}`;
   }
+
   function erase(e) {
     e.target.className = 'grid-square';
   }
+
+  function addRainbow(e) {
+    return
+  }
+
   return (
     <div>
       <button onClick={() => setMode("eraser")}>Eraser</button>
