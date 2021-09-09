@@ -30,7 +30,7 @@ const Sidebar = (props) => {
         addRainbow(e);
         break;
       default:
-        return;
+        return
     }
   }
 
@@ -93,16 +93,6 @@ const Sidebar = (props) => {
         </label>
         <input id="grid-size-slider" type="range" min="10" max="99" defaultValue="10" step="1"/>
       </div>
-      {/* <button onClick={clearGrid}>Clear</button>
-      <button onClick={() => setMode("eraser")} id="eraser">Eraser</button>
-      <button onClick={() => setMode("color black")} id="black">Black</button>
-      <button onClick={() => setMode("color blue")} id="blue">Blue</button>
-      <button onClick={() => setMode("color green")} id="green">Green</button>
-      <button onClick={() => setMode("color magenta")} id="magenta">Magenta</button>
-      <button onClick={() => setMode("rainbow")} id="rainbow">Rainbow</button>
-      <button onClick={() => setMode("color red")}>Red</button>
-      <button onClick={() => setMode("color yellow")} id="yellow">Yellow</button>
-      <button onClick={() => setMode("color cyan")} id="cyan">Cyan</button> */}
       <button onClick={clearGrid}>Clear</button>
       <button onClick={changeMode} id="eraser">Eraser</button>
       <button onClick={changeMode} id="black" className="selected">Black</button>
@@ -113,7 +103,6 @@ const Sidebar = (props) => {
       <button onClick={changeMode}>Red</button>
       <button onClick={changeMode} id="yellow">Yellow</button>
       <button onClick={changeMode} id="cyan">Cyan</button>
-      
     </div>
   )
 }
