@@ -4,7 +4,7 @@ import title from "../images/title.gif"
 
 const Title = () => {
   return (
-    <img src={title}/>
+    <img src={title} alt="title"/>
   )
 }
 

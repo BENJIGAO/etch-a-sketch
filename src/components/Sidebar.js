@@ -29,6 +29,8 @@ const Sidebar = (props) => {
       case mode === "rainbow":
         addRainbow(e);
         break;
+      default:
+        return;
     }
   }
 

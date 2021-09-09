@@ -1,4 +1,3 @@
-import React, { useState, memo } from 'react'
 import "../component_styles/Grid.css"
 
 const Grid = ({ sideLength }) => {

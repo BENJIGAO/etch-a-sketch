@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "./Reset.css"
+import "./Reset.css";
 import './App.css';
 
 import Sidebar from './components/Sidebar';
