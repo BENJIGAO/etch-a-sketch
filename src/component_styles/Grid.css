@@ -1,6 +1,6 @@
 #grid-container {
-  height: 600px;
-  width: 600px;
+  height: 500px;
+  width: 500px;
   display: grid;
   border: thick solid black;
   background-color: whitesmoke;
