@@ -1,0 +1,12 @@
+#grid-container {
+  height: 600px;
+  width: 600px;
+  display: grid;
+  border: thick solid black;
+  background-color: whitesmoke;
+  margin-top: 20px;
+}
+
+.grid-square {
+  border: thin solid lightgray;
+}
